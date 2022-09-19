@@ -7,7 +7,7 @@ public class signal : MonoBehaviour
     public GameObject val_wall;
     public float seconds;
     public AudioSource m_AudioSource;
-    public string signal_state;
+    public string signal_state;//信号の色
 
     // Start is called before the first frame update
     private void Start()
@@ -30,6 +30,11 @@ public class signal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //0~2  青信号
+        //2~4  黄信号
+        //4~6  赤信号 通行不可
+        //6~8  黄信号
+        //8~10 青信号
         seconds += Time.deltaTime;
         if (seconds >= 2 && seconds <= 8)
         {
