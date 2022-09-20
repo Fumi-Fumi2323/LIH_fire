@@ -8,15 +8,13 @@ public class check_point_2 : MonoBehaviour
     AudioSource audioSource;
     public  bool first_checkpoint;
     public GameObject next_check_point;
-    public bool last_target;
+    public bool last_check_point;
     private bool next_visible = false;
-    private bool next_music = false;
  
 
     void Start()
     {
         
-
         //初めてのチェックポイントでないなら非表示
         if (!first_checkpoint)
         {
@@ -30,7 +28,6 @@ public class check_point_2 : MonoBehaviour
         }
 
         next_visible = false;
-        next_music = false;
 
     }
 
@@ -52,7 +49,7 @@ public class check_point_2 : MonoBehaviour
         // 1.rangeタグに接触
         if (other.CompareTag("range")) 
         {
-            if (!last_target)
+            if (!last_check_point)
             {
                 next_visible = true;
             }
