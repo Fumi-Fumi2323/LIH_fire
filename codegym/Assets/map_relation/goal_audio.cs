@@ -4,39 +4,28 @@ using UnityEngine;
 using static UnityEditor.PlayerSettings;
 
 public class goal_audio : MonoBehaviour
-{
-    // Start is called before the first frame update
+{ 
     AudioSource audioSource;
     GameObject Blue;
-    float distanceOfPlayer;
-    //Destination destination;
     public GameObject pre_check_point;
-    public GameObject pre_target;
     public bool music_on;
+    
 
- 
     void Start()
     {
         Blue = GameObject.FindGameObjectWithTag("Blue");
 
         audioSource = this.GetComponent<AudioSource>();
         audioSource.Stop();
-
-        //target = GameObject.FindGameObjectWithTag("target");
-        //destination = target.GetComponent<Destination>();
-
         music_on = true;
     }
 
     void Update()
     {
-        
-        Debug.Log("‚Å‚«");
         if (music_on)
         {
             if (pre_check_point == null)
             {
-                Debug.Log("‚Å‚«‚Ä‚é");
                 audioSource = this.GetComponent<AudioSource>();
                 audioSource.Play();
                 music_on = false;

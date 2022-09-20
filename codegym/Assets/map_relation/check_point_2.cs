@@ -40,7 +40,6 @@ public class check_point_2 : MonoBehaviour
         //2.次のチェックポイントを表示
         if (next_visible)
         {
-            Debug.Log("あい");
             next_check_point.SetActive(true);
             next_visible = false;
             Destroy_on();
@@ -53,7 +52,6 @@ public class check_point_2 : MonoBehaviour
         // 1.rangeタグに接触
         if (other.CompareTag("range")) 
         {
-            Debug.Log("あ");
             if (!last_target)
             {
                 next_visible = true;
@@ -69,7 +67,6 @@ public class check_point_2 : MonoBehaviour
 
     void Destroy_on()
     {
-        Debug.Log("あいうえお");
         Destroy(gameObject);
     }
 }
