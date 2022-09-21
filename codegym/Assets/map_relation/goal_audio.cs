@@ -4,17 +4,13 @@ using UnityEngine;
 using static UnityEditor.PlayerSettings;
 
 public class goal_audio : MonoBehaviour
-{ 
+{
     AudioSource audioSource;
-    GameObject Blue;
     public GameObject pre_check_point;
     public bool music_on;
-    
 
     void Start()
     {
-        Blue = GameObject.FindGameObjectWithTag("Blue");
-
         audioSource = this.GetComponent<AudioSource>();
         audioSource.Stop();
         music_on = true;
@@ -40,7 +36,6 @@ public class goal_audio : MonoBehaviour
         if (other.CompareTag("range"))
         {
             Invoke("music_stop", 2.0f);
-
         }
 
     }
